@@ -24,10 +24,24 @@
 
 <main>
 <div class="container py-4">
-
-  <h2 class="mb-3">Upcoming Events</h2>
-  <div class="row g-3">
-    <div class="col-md-4">
+<h2 class="mb-3">Upcoming Events</h2> 
+<div class="row g-2 mb-3"> 
+<div class="col-md-8"> 
+<label for="search" class="form-label">Search by title</label> 
+<input type="search" id="search" class="form-control" placeholder="e.g. 
+Hackathon"> 
+</div> 
+<div class="col-md-4"> 
+<label for="seat-filter" class="form-label">Seats</label> 
+<select id="seat-filter" class="form-select"> 
+<option value="all">All events</option> 
+<option value="open">Open seats</option> 
+<option value="full">Sold out</option> 
+</select> 
+</div> 
+    </div> 
+    <div class="row g-3" id="eventList"></div>
+  
       <div class="card event-card h-100">
         <img src="media/hackathon.jpg" class="card-img-top" alt="Students at last year's hackathon">
         <div class="card-body">
